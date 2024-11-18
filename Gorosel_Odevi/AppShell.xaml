@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="Gorosel_Odevi.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Gorosel_Odevi"
+    Shell.FlyoutBehavior="Flyout">
+    <Shell.FlyoutHeader>
+        <Border Background="#5c2c1d"
+                StrokeThickness="0">
+            <Grid ColumnDefinitions="Auto,*"
+                  Padding="25">
+                <Image Grid.Column="0"
+                       Source="foto.png"
+                       Aspect="AspectFill"
+                       HeightRequest="50"
+                       WidthRequest="50"/>
+                <Label Grid.Column="1"
+                       Text="Sami T A Awawda"
+                       VerticalTextAlignment="Center"
+                       FontSize="28"
+                       FontAttributes="Bold"
+                       TextColor="#ad815e"/>
+
+            </Grid>
+        </Border>
+    </Shell.FlyoutHeader>
+    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
+       
+    <ShellContent
+        Title="Ana sayfa"
+        Icon="home.png"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+    <ShellContent
+        Title="Kerdi hesaplama"
+        Icon="kerdi.png"
+        ContentTemplate="{DataTemplate local:Kerdi_hesaplam}"
+        Route="Kerdi_hesaplam" />
+    <ShellContent
+        Title="Vücut kitle indexsi"
+        Icon="body.png"
+        ContentTemplate="{DataTemplate local:Body}"
+        Route="ColorPicker1" />
+    <ShellContent
+        Title="Renk seçici"
+        Icon="color.png"
+        ContentTemplate="{DataTemplate local:ColorPicker}"
+        Route="ColorPicker" />
+    <ShellContent
+        Title="Yapılacaklar"
+        Icon="yap.png"
+        ContentTemplate="{DataTemplate local:Task}"
+        Route="Task" />
+    </FlyoutItem>
+
+</Shell>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Gorosel_Odevi.ColorPicker"
+             BackgroundColor="#5c2c1d">
+    <Grid RowDefinitions="Auto, *,* " >
+        <VerticalStackLayout Grid.Row="0">
+            <Label Text="istediğin rengi seç " FontSize="30" BackgroundColor="#5c2c1d" HorizontalOptions="Center" />
+        </VerticalStackLayout>
+    <VerticalStackLayout
+        Spacing="25"
+        Padding="30.0"
+        VerticalOptions="Start" WidthRequest="550" HeightRequest="320" Grid.Row="1" Margin="20" >
+
+        <Slider x:Name="sliderR" Minimum="0" Maximum="255" MinimumTrackColor="Red"  ValueChanged="sliderR_ValueChanged"/>
+            <Slider x:Name="sliderG" Minimum="0" Maximum="255" MinimumTrackColor="Green" ValueChanged="sliderG_ValueChanged"/>
+            <Slider x:Name="sliderB" Minimum="0" Maximum="255" MinimumTrackColor="Blue" ValueChanged="sliderB_ValueChanged"/>
+            <Label x:Name="colorCodeLabel" Text="" FontSize="20" TextColor="Black"  BackgroundColor="LightGray" WidthRequest="160" >
+                <Label.GestureRecognizers >
+                    <TapGestureRecognizer Tapped="ColorCodeLabel_Tapped"/> 
+                </Label.GestureRecognizers>
+               
+            </Label>
+            <Button Text="Random" Clicked="Button_Clicked" WidthRequest="130" Margin="9"/>
+
+        </VerticalStackLayout >
+        <VerticalStackLayout Grid.Row="2" VerticalOptions="Center">
+            <BoxView x:Name="boxv" HeightRequest="200" WidthRequest="550" Margin="20" VerticalOptions="Center"  BackgroundColor="Red"  />
+           
+
+        </VerticalStackLayout>
+    </Grid>
+</ContentPage>

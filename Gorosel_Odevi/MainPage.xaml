@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Gorosel_Odevi.MainPage"
+              BackgroundColor="#5c2c1d">
+
+    <ScrollView>
+        
+        
+        
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+
+            <Image Source="sami.png" 
+                   WidthRequest="700" 
+                HeightRequest="250" 
+                HorizontalOptions="Center"
+                   />
+
+
+
+            <Label
+                Text="Samı T A Awawda"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="32"
+                HorizontalOptions="Center"
+                TextColor="#ad815e"/>
+
+            <Label
+                Text="Bartın üniversitesi "
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description=""
+                FontSize="18"
+                HorizontalOptions="Center" 
+                TextColor="#ad815e"/>
+            <Label
+                Text="Odev-2 "
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description=""
+                FontSize="15"
+                HorizontalOptions="Center" 
+                TextColor="#ad815e"/>
+
+           
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

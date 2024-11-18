@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Gorosel_Odevi.Task"
+             Title="Task"
+              BackgroundColor="#5c2c1d">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="ekle" Order="Secondary"  IconImageSource="add.png"/>
+    </ContentPage.ToolbarItems>
+    <StackLayout>
+
+        <ListView x:Name="NoteListView">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Border>
+                            
+                            <Grid ColumnDefinitions="Auto,2* " RowDefinitions="Auto,*" >
+                            <StackLayout  > 
+                                    <Label Text="{Binding }" VerticalOptions="CenterAndExpand" Grid.Column="0" Grid.Row="0" />
+                                    
+                            </StackLayout>
+                                <VerticalStackLayout Spacing="10" Grid.Column="1" Grid.RowSpan="3">
+                                    <ImageButton Source="pencil.png" Clicked="EditNote" Grid.Column="1" WidthRequest="15"   HeightRequest="15" />
+                                    <ImageButton Source="delete.png" Clicked="DeleteNote" Grid.Column="2" HeightRequest="15"  WidthRequest="15"/>
+                                </VerticalStackLayout>
+                            </Grid>
+                        </Border> 
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <ImageButton Source="add.png" Clicked="TakeNote" VerticalOptions="End" HorizontalOptions="End" Margin="20" HeightRequest="20" WidthRequest="20" />
+
+    </StackLayout>
+
+</ContentPage>

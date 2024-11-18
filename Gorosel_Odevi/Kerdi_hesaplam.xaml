@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Gorosel_Odevi.Kerdi_hesaplam"
+             Title="Kerdi hesaplama"
+              BackgroundColor="#5c2c1d">
+    <VerticalStackLayout     >
+         
+        <Picker x:Name="myPicker" Title="Kerdi Türü seç lütfen " TitleColor="#ad815e" FontSize="18" SelectedIndexChanged="myPicker_SelectedIndexChanged" BackgroundColor="White"   HorizontalOptions="Center"    >
+              
+                <Picker.Items  >
+                <x:String>İhtiyaç kerdisi</x:String>
+                <x:String>konut kerdisi</x:String>
+                <x:String>Taşıt kerdisi</x:String>
+                <x:String>Ticari kerdisi</x:String>
+
+            </Picker.Items>
+        </Picker>
+           
+
+
+
+            <VerticalStackLayout Margin="10">
+
+            <Entry x:Name="kerdi_tutari"  TextColor="#ad815e" Grid.Column="1" Grid.Row="1"  Placeholder="Kerdi Tutari(TL)" AutomationProperties.HelpText="20" BackgroundColor="Lavender"  />
+
+
+        </VerticalStackLayout>
+
+        <VerticalStackLayout Margin="10">
+            <Entry x:Name="faiz_orani" TextColor="#ad815e"  Grid.Column="1" Grid.Row="2"  Text="{Binding SliderValue, Mode=TwoWay}" Placeholder="Faiz oranı(%)" BackgroundColor="Lavender"  />
+        </VerticalStackLayout>
+
+        <VerticalStackLayout Margin="10">
+            <Entry x:Name="valueLabel" TextColor="#ad815e"  Grid.Column="1" Grid.Row="2"  Text="{Binding SliderValue, Mode=TwoWay}" Placeholder="Vade(ay)" BackgroundColor="Lavender"  />
+        </VerticalStackLayout>
+        <VerticalStackLayout Margin="10">
+            <Slider Grid.Column="1" Grid.Row="3" Value="{Binding SliderValue}" Minimum="1" Maximum="120" ValueChanged="OnSliderValueChanged" 
+                    MinimumTrackColor="#ad815e"       
+             MaximumTrackColor="#ad815e"/>
+           
+            
+        </VerticalStackLayout>
+        <Label x:Name="AlikTak"  BackgroundColor="LightGrey" HorizontalOptions="Center" Margin="2" FontSize="20" Text="Aylık Taksit: " />
+        <Label  x:Name="ToplamOde"  BackgroundColor="LightGrey" HorizontalOptions="Center" Margin="2" FontSize="20" Text="Toplm ödeme: " />
+        <Label  x:Name="ToplamFa"  BackgroundColor="LightGrey" HorizontalOptions="Center" Margin="2" FontSize="20" Text="Toplam faiz: " />
+
+        <Button Text="Hesapla" Margin="15" VerticalOptions="Center" WidthRequest="100" Clicked="Button_Clicked" BackgroundColor="WhiteSmoke"  TextColor="#ad815e" FontSize="18" />
+
+
+
+    </VerticalStackLayout>
+    
+
+</ContentPage>

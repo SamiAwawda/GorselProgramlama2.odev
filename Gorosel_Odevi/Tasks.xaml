@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Gorosel_Odevi.Tasks"
+             Title="Tasks">
+    
+
+            <StackLayout>
+        <Entry x:Name="noteEntry" Placeholder="Enter your note" />
+        <StackLayout Orientation="Horizontal">
+            <Button Text="Add Note" Clicked="OnAddNoteClicked" />
+            <ImageButton Source="edit_icon.png" Clicked="OnEditNoteClicked" />
+            <ImageButton Source="delete_icon.png" Clicked="OnDeleteNoteClicked" />
+        </StackLayout>
+        <ListView x:Name="notesListView">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button Text="Delete All Notes" Clicked="OnDeleteNotesClicked" />
+    </StackLayout>
+</ContentPage>

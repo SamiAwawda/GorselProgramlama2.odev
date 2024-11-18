@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Gorosel_Odevi.TaskDetils"
+             Title="TaskDetils">
+    <Grid ColumnDefinitions="Auto,*" ColumnSpacing="10"
+          RowDefinitions="Auto,Auto,Auto,Auto,Auto" RowSpacing="10" Padding="10">
+
+        <Label Grid.Row ="0"  Grid.Column="0" VerticalOptions="Center" Text="Note:"/>
+
+
+        <Entry x:Name="txtnote"   Grid.Row ="0" Grid.Column="1" Placeholder="Note"/>
+        
+
+        <HorizontalStackLayout 
+            Padding="30"
+            Grid.Row="4" Grid.ColumnSpan="2"
+            HorizontalOptions="End" Spacing="20">
+        </HorizontalStackLayout>
+        <HorizontalStackLayout 
+            Padding="30"
+            Grid.Row="4" Grid.ColumnSpan="2"
+            HorizontalOptions="End" Spacing="20">
+            <Button Text="TAMAM" Clicked="OKClicked"/>
+            <Button Text="İPTAL" Clicked="CancelClicked"/>
+        </HorizontalStackLayout>
+    </Grid>
+
+</ContentPage>
